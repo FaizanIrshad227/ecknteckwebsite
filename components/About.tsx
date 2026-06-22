@@ -56,7 +56,7 @@ export default function About() {
           Who we are
         </div>
         <h2 style={{ fontFamily: "var(--font-space)", fontSize: "clamp(1.9rem,4vw,2.8rem)", fontWeight: 700, letterSpacing: "-0.8px", marginBottom: "1rem", lineHeight: 1.15 }}>
-          Built by engineers,<br />driven by outcomes
+          Built by data scientists,<br />driven by outcomes
         </h2>
         <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: 1.75, marginBottom: "2rem" }}>
           Ecknteck is a specialist AI and data services firm. We partner with startups and enterprises

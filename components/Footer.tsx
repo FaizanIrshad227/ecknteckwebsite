@@ -8,6 +8,14 @@ export default function Footer() {
       <div style={{ fontFamily: "var(--font-space)", fontSize: "1rem", fontWeight: 700 }}>
         Eckn<span style={{ color: "var(--accent)" }}>teck</span>
       </div>
+      <a
+        href="https://www.eckntecklearning.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ fontSize: "0.85rem", color: "var(--accent)", textDecoration: "none", fontWeight: 500 }}
+      >
+        Trainings & Workshops →
+      </a>
       <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
         © 2026 Ecknteck. All rights reserved.
       </div>

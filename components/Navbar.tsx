@@ -19,9 +19,12 @@ export default function Navbar() {
       </Link>
 
       <ul style={{ display: "flex", gap: "2.2rem", listStyle: "none" }}>
-        {["Services", "About", "Contact"].map((item) => (
+        {["Services", "About", "Contact", "Trainings"].map((item) => (
           <li key={item}>
-            <a href={`#${item.toLowerCase()}`} style={{
+            <a href={item === "Trainings" ? "https://www.eckntecklearning.com" : `#${item.toLowerCase()}`}
+            target={item === "Trainings" ? "_blank" : undefined}
+            rel={item === "Trainings" ? "noopener noreferrer" : undefined}
+            style={{
               color: "var(--muted)", fontSize: "0.9rem", textDecoration: "none",
               transition: "color 0.2s",
             }}

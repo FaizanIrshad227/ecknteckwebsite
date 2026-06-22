@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #6C63FF;
+  --accent2: #00D4AA;
+  --bg: #0A0A0F;
+  --bg2: #111118;
+  --bg3: #16161F;
+  --border: rgba(255,255,255,0.08);
+  --muted: #8884A8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: #F0EFF8;
+  overflow-x: hidden;
+}

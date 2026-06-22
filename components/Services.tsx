@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 
-const services = [
+const services: { icon: string; title: string; desc: string; tags: string[]; link?: string }[] = [
   { icon: "🤖", title: "AI Model Development", desc: "Custom machine learning and deep learning models trained on your data — built to solve your specific business problem.", tags: ["LLMs", "Computer Vision", "NLP"] },
   { icon: "📊", title: "Data Engineering", desc: "Robust pipelines that collect, clean, and centralise your data — giving your team a single source of truth.", tags: ["ETL Pipelines", "Data Lakes", "Real-time"] },
   { icon: "⚡", title: "Intelligent Automation", desc: "Automate repetitive workflows using AI agents — reduce manual work and let your team focus on what matters.", tags: ["AI Agents", "RPA", "Workflow AI"] },
   { icon: "📈", title: "Analytics & BI", desc: "Interactive dashboards and predictive analytics that give decision-makers real-time visibility into performance.", tags: ["Dashboards", "Forecasting", "KPI Tracking"] },
   { icon: "🔗", title: "AI Integration", desc: "Embed AI capabilities into your existing products and systems — APIs, SDKs, or custom middleware.", tags: ["API Design", "RAG Systems", "Embeddings"] },
   { icon: "🛡️", title: "AI Strategy & Consulting", desc: "Not sure where to start? We map your data assets and identify high-ROI AI opportunities across your organisation.", tags: ["Roadmap", "Audit", "POC"] },
+  { icon: "🎓", title: "AI & Automation Trainings & Workshops", desc: "Hands-on training programs and workshops to upskill your team in AI, machine learning, and automation — delivered by practitioners.", tags: ["Workshops", "Upskilling", "Automation"], link: "https://www.eckntecklearning.com" },
 ];
 
 export default function Services() {
@@ -69,6 +70,14 @@ export default function Services() {
                 }}>{tag}</span>
               ))}
             </div>
+            {s.link && (
+              <a href={s.link} target="_blank" rel="noopener noreferrer" style={{
+                display: "inline-block", marginTop: "1rem",
+                fontSize: "0.85rem", color: "var(--accent2)", textDecoration: "none", fontWeight: 500,
+              }}>
+                Visit eckntecklearning.com →
+              </a>
+            )}
           </div>
         ))}
       </div>

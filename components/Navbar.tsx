@@ -19,12 +19,12 @@ export default function Navbar() {
       </Link>
 
       <ul style={{ display: "flex", gap: "2.2rem", listStyle: "none" }}>
-        {["Services", "About", "Contact", "Trainings", "Live AI Apps"].map((item) => (
+        {["Services", "About", "Contact", "Trainings", "Live AI Agent"].map((item) => (
           <li key={item}>
             <a
             href={
               item === "Trainings" ? "https://www.eckntecklearning.com"
-              : item === "Live AI Apps" ? "https://web-production-ee1d3.up.railway.app"
+              : item === "Live AI Agent" ? "https://web-production-ee1d3.up.railway.app"
               : `#${item.toLowerCase()}`
             }
             target={item === "Trainings" || item === "Live AI Apps" ? "_blank" : undefined}

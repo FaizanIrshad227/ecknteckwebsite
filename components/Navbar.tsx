@@ -24,7 +24,7 @@ export default function Navbar() {
             <a
             href={
               item === "Trainings" ? "https://www.eckntecklearning.com"
-              : item === "Live AI Apps" ? "https://railway.app/project/14852b76-7a0d-478d-819e-60d34bf283f4"
+              : item === "Live AI Apps" ? "https://web-production-ee1d3.up.railway.app"
               : `#${item.toLowerCase()}`
             }
             target={item === "Trainings" || item === "Live AI Apps" ? "_blank" : undefined}

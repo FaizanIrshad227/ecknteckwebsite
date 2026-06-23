@@ -27,9 +27,9 @@ export default function Navbar() {
               : item === "Live AI Agent" ? "https://web-production-ee1d3.up.railway.app"
               : `#${item.toLowerCase()}`
             }
-            target={item === "Trainings" || item === "Live AI Apps" ? "_blank" : undefined}
-            rel={item === "Trainings" || item === "Live AI Apps" ? "noopener noreferrer" : undefined}
-            style={item === "Live AI Apps" ? {
+            target={item === "Trainings" || item === "Live AI Agent" ? "_blank" : undefined}
+            rel={item === "Trainings" || item === "Live AI Agent" ? "noopener noreferrer" : undefined}
+            style={item === "Live AI Agent" ? {
               color: "#00D4AA", fontSize: "0.9rem", textDecoration: "none",
               border: "1px solid rgba(0,212,170,0.35)", borderRadius: "6px",
               padding: "0.25rem 0.7rem", transition: "background 0.2s",
@@ -38,11 +38,11 @@ export default function Navbar() {
               transition: "color 0.2s",
             }}
             onMouseEnter={e => {
-              if (item === "Live AI Apps") e.currentTarget.style.background = "rgba(0,212,170,0.1)";
+              if (item === "Live AI Agent") e.currentTarget.style.background = "rgba(0,212,170,0.1)";
               else e.currentTarget.style.color = "#F0EFF8";
             }}
             onMouseLeave={e => {
-              if (item === "Live AI Apps") e.currentTarget.style.background = "transparent";
+              if (item === "Live AI Agent") e.currentTarget.style.background = "transparent";
               else e.currentTarget.style.color = "var(--muted)";
             }}
             >{item}</a>

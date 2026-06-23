@@ -19,17 +19,32 @@ export default function Navbar() {
       </Link>
 
       <ul style={{ display: "flex", gap: "2.2rem", listStyle: "none" }}>
-        {["Services", "About", "Contact", "Trainings"].map((item) => (
+        {["Services", "About", "Contact", "Trainings", "Live AI Apps"].map((item) => (
           <li key={item}>
-            <a href={item === "Trainings" ? "https://www.eckntecklearning.com" : `#${item.toLowerCase()}`}
-            target={item === "Trainings" ? "_blank" : undefined}
-            rel={item === "Trainings" ? "noopener noreferrer" : undefined}
-            style={{
+            <a
+            href={
+              item === "Trainings" ? "https://www.eckntecklearning.com"
+              : item === "Live AI Apps" ? "https://railway.app/project/14852b76-7a0d-478d-819e-60d34bf283f4"
+              : `#${item.toLowerCase()}`
+            }
+            target={item === "Trainings" || item === "Live AI Apps" ? "_blank" : undefined}
+            rel={item === "Trainings" || item === "Live AI Apps" ? "noopener noreferrer" : undefined}
+            style={item === "Live AI Apps" ? {
+              color: "#00D4AA", fontSize: "0.9rem", textDecoration: "none",
+              border: "1px solid rgba(0,212,170,0.35)", borderRadius: "6px",
+              padding: "0.25rem 0.7rem", transition: "background 0.2s",
+            } : {
               color: "var(--muted)", fontSize: "0.9rem", textDecoration: "none",
               transition: "color 0.2s",
             }}
-            onMouseEnter={e => (e.currentTarget.style.color = "#F0EFF8")}
-            onMouseLeave={e => (e.currentTarget.style.color = "var(--muted)")}
+            onMouseEnter={e => {
+              if (item === "Live AI Apps") e.currentTarget.style.background = "rgba(0,212,170,0.1)";
+              else e.currentTarget.style.color = "#F0EFF8";
+            }}
+            onMouseLeave={e => {
+              if (item === "Live AI Apps") e.currentTarget.style.background = "transparent";
+              else e.currentTarget.style.color = "var(--muted)";
+            }}
             >{item}</a>
           </li>
         ))}
